@@ -73,7 +73,7 @@ const allTags = [...new Set(allPosts.flatMap((post: CollectionEntry<'blog'>) => 
       <div class="lg:col-span-3">
         <div class="space-y-8" id="blog-posts-container">
           {sortedPosts.map((post: CollectionEntry<'blog'>) => (
-            <article class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <article class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
               <div class="flex flex-wrap gap-2 mb-3">
                 {post.data.tags.map((tagName: unknown) => {
                   const tagStr = tagName as string;
@@ -100,7 +100,7 @@ const allTags = [...new Set(allPosts.flatMap((post: CollectionEntry<'blog'>) => 
                   <img 
                     src={post.data.image} 
                     alt={post.data.title} 
-                    class="w-full h-auto rounded-lg object-cover max-h-60"
+                    class="w-full h-auto rounded-lg object-cover "
                   />
                 </div>
               )}

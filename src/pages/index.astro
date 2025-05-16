@@ -3,11 +3,57 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Social Media metadata
+const ogTitle = "SAFERR AI Lab - Safety, Reliability, and Robustness of AI";
+const ogDescription = "SAFERR AI Lab is dedicated to advancing research in AI safety, reliability, and robustness. We focus on developing trustworthy AI systems that benefit humanity.";
+const ogImage = "https://saferrai-lab.org/og-image.png";
+const ogUrl = "https://saferrai-lab.org";
 ---
 
-<Layout title="SAFERR AI Lab - Safety, Reliability, and Robustness of AI">
-	<Hero />
-	<Features />
+<Layout 
+  title={ogTitle}
+  description={ogDescription}
+>
+  {/* Primary Meta Tags */}
+  <meta name="title" content={ogTitle} />
+  <meta name="description" content={ogDescription} />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={ogUrl} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content="SAFERR AI Lab" />
+  <meta property="og:locale" content="en_US" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  <meta name="twitter:image" content={ogImage} />
+
+  {/* LinkedIn */}
+  <meta property="linkedin:title" content={ogTitle} />
+  <meta property="linkedin:description" content={ogDescription} />
+  <meta property="linkedin:image" content={ogImage} />
+  <meta property="linkedin:url" content={ogUrl} />
+
+  {/* WhatsApp */}
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  {/* Additional Meta Tags */}
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="msapplication-TileColor" content="#3b82f6" />
+  <meta name="msapplication-TileImage" content={ogImage} />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="SAFERR AI Lab" />
+  <meta name="application-name" content="SAFERR AI Lab" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <Hero />
+  <Features />
 </Layout>

@@ -1,3 +1,7 @@
+---
+import { news } from '../lib/data';
+---
+
 <section class="bg-gradient-to-r from-primary/10 to-accent/10 py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -16,21 +20,16 @@
         <div class="p-4 bg-base-100 rounded-lg shadow-xl w-full border-2 border-blue-100">
           <h2 class="text-2xl font-bold mb-4">Latest News</h2>
           <div class="space-y-4">
-            <div class="p-3 border-l-4 border-primary bg-base-200 rounded">
-              <p class="text-sm text-gray-500">June 15, 2023</p>
-              <h3 class="font-medium">New paper accepted at NeurIPS 2023</h3>
-              <p class="text-sm mt-1">Our work on robust reinforcement learning has been accepted at NeurIPS 2023. <a href="/blog/neurips-2023" class="text-blue-500">Read more</a></p>
-            </div>
-            <div class="p-3 border-l-4 border-primary bg-base-200 rounded">
-              <p class="text-sm text-gray-500">May 3, 2023</p>
-              <h3 class="font-medium">Lab receives major grant</h3>
-              <p class="text-sm mt-1">Excited to announce that our lab has received a $2M grant to study adversarial robustness in LLMs.</p>
-            </div>
-            <div class="p-3 border-l-4 border-primary bg-base-200 rounded">
-              <p class="text-sm text-gray-500">April 21, 2023</p>
-              <h3 class="font-medium">New PhD students joining</h3>
-              <p class="text-sm mt-1">We're welcoming three new PhD students to our lab this fall semester.</p>
-            </div>
+            {news.slice(0, 3).map((item) => (
+              <div class="p-3 border-l-4 border-primary bg-base-200 rounded">
+                <p class="text-sm text-gray-500">{item.date}</p>
+                <h3 class="font-medium">{item.title}</h3>
+                <p class="text-sm mt-1">
+                  {item.excerpt}
+                  {item.link && <a href={item.link} class="text-blue-500"> Read more</a>}
+                </p>
+              </div>
+            ))}
           </div>
           <!-- <a href="/blog" class="btn btn-sm btn-link mt-4">View all news →</a> -->
         </div>

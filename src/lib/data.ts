@@ -821,3 +821,41 @@ export const projects: Project[] = [
         funding: ["National Institute of Standards and Technology"]
     }
 ]; 
+
+export interface News {
+    id: string;
+    title: string;
+    date: string;
+    excerpt: string;
+    link?: string;
+}
+
+export const news: News[] = [
+    {
+        id: "new-paper-icml-2025",
+        title: "New paper accepted at ICML 2025",
+        date: "May 7, 2025",
+        excerpt: "We're excited to announce that our paper `Inference-Time Alignment of LLMs via User-Specified Multi-Criteria Transfer Decoding` has been accepted at ICML 2025. This work represents a inference-time alignment of LLMs that can be used to align LLMs with user-specified criteria.",
+        link: "/blog/inference-time-alignment-multi-criteria"
+    },
+    {
+        id: "new-paper-aaai-2024",
+        title: "New paper accepted at AAAI 2024",
+        date: "December 12, 2024",
+        excerpt: "Our paper titled `Align-Pro: A principled approach to alignment of LLMs` has been accepted at AAAI 2024. This work represents a principled approach to alignment of LLMs that can be used to align LLMs by employing a trainable prompter",
+        link: "/blog/align-pro"
+    },
+    {
+        id: "new-phd-student-2024",
+        title: "Welcoming a PhD student to the lab",
+        date: "August 1, 2024",
+        excerpt: "We're delighted to welcome a new PhD student, Avinash Reddy, joining our lab this fall semester. He will be working on the broad topic of `Alignment of Language Models`.",
+    },
+    {
+        id: "launch-of-saferr-ai-lab",
+        title: "Launch of SAFERR AI Lab",
+        date: "August 19, 2024",
+        excerpt: "We're excited to announce the launch of SAFERR AI Lab. This lab is dedicated to the research of safety, reliability, and robustness of AI systems.",
+    }
+
+];
