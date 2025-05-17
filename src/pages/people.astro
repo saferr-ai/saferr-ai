@@ -11,6 +11,8 @@ const phd = people.filter(person => person.role === 'phd');
 const masters = people.filter(person => person.role === 'masters');
 const undergrad = people.filter(person => person.role === 'undergrad');
 const alumni = people.filter(person => person.role === 'alumni');
+const collaborators = people.filter(person => person.role === 'collaborator');
+const postdocs = people.filter(person => person.role === 'postdoc');
 
 // Define types for the social links
 interface SocialLink {
@@ -124,5 +126,24 @@ interface Person {
         </div>
       </div>
     )}
+
+    {postdocs.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold mb-6 border-b pb-2">Postdocs</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {postdocs.map(person => <PersonCard person={person} />)}
+        </div>
+      </div>
+    )}
+    
+    {collaborators.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold mb-6 border-b pb-2">Collaborators</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {collaborators.map(person => <PersonCard person={person} />)}
+        </div>
+      </div>
+    )}
+
   </div>
 </Layout> 

@@ -1,7 +1,7 @@
 ---
 const navLinks = [
   { name: 'Home', url: '/' },
-  { name: 'Research', url: '/research' },
+  // { name: 'Research', url: '/research' },
   { name: 'Publications', url: '/publications' },
   { name: 'News', url: '/news' },
   { name: 'People', url: '/people' },
@@ -9,14 +9,11 @@ const navLinks = [
 ];
 ---
 
-<header class="bg-base-100 shadow-md">
+<header id="main-header" class="fixed top-0 left-0 right-0 bg-base-100 shadow-md transform transition-transform duration-300 z-50 bg-white">
   <div class="container mx-auto px-4 py-3">
-    <nav class="flex  flex-col md:flex-row justify-between items-center">
-
+    <nav class="flex flex-col md:flex-row justify-between items-center">
       <div class="flex flex-row items-center justify-between w-full">
-
-
-        <div class="flex items-center mb-3 md:mb-0">
+        <div class="flex items-center mb-0">
           <a href="/" class="flex items-center space-x-2">
             <img src="/logo.png" alt="SAFERR AI Lab" class="h-10 w-50">
           </a>
@@ -55,15 +52,60 @@ const navLinks = [
   </div>
 </header>
 
+<!-- Spacer to prevent content from hiding under fixed header -->
+<div class="h-[72px]"></div>
+
+<style>
+  #main-header {
+    transform: translateY(0);
+  }
+
+  #main-header.hide {
+    transform: translateY(-100%);
+  }
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const header = document.getElementById('main-header');
     
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    // Mobile menu toggle
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
     }
+
+    // Scroll handling
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // If we're at the top, always show the header
+          if (currentScrollY <= 0) {
+            header?.classList.remove('hide');
+          } else {
+            // If we're scrolling up (current scroll is less than last scroll)
+            if (currentScrollY < lastScrollY) {
+              header?.classList.remove('hide');
+            } else {
+              // If we're scrolling down
+              header?.classList.add('hide');
+            }
+          }
+          
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    });
   });
 </script> 

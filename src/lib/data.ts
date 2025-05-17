@@ -591,13 +591,14 @@ export interface Person {
     name: string;
     title: string;
     image: string;
-    role: "faculty" | "phd" | "masters" | "undergrad" | "alumni" | "staff";
+    role: "faculty" | "phd" | "masters" | "undergrad" | "alumni" | "staff" | "collaborator" | "postdoc";
     bio: string;
     interests: string[];
     website?: string;
     github?: string;
     twitter?: string;
     linkedin?: string;
+    orcid?: string;
     scholar?: string;
     email?: string;
 }
@@ -606,7 +607,7 @@ export const people: Person[] = [
     {
         id: "amrit-bedi",
         name: "Prof. Amrit Singh Bedi",
-        title: "Assistant Professor, Lab Director",
+        title: "Assistant Professor, Lab Director, UCF",
         image: "https://media.licdn.com/dms/image/v2/D4E03AQGwAdbGEznnNQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1671755146478?e=1752710400&v=beta&t=2GUM74n1pQBGC48fcY97o_ZNikGFPsSl6aPw8Z1JpLU",
         role: "faculty",
         bio: "Amrit Singh Bedi is a Professor of Computer Science specializing in AI safety and reliability. He has published over 100 papers and received numerous awards for his work on robust AI systems.",
@@ -619,90 +620,151 @@ export const people: Person[] = [
         email: "amritsinghbedi@gmail.com"
     },
 
+
     {
-        id: "alice-johnson",
-        name: "Dr. Alice Johnson",
-        title: "Research Scientist",
-        image: "/people/alice-johnson.jpg",
-        role: "staff",
-        bio: "Alice Johnson specializes in developing explainable AI systems that can communicate their decisions in human-understandable terms.",
-        interests: ["Explainable AI", "Human-AI Interaction", "Machine Learning"],
-        website: "https://example.com/alicejohnson",
-        github: "https://github.com/alicejohnson",
-        linkedin: "https://linkedin.com/in/alicejohnson",
-        scholar: "https://scholar.google.com/citations?user=alicejohnson",
-        email: "alice.johnson@example.edu"
-    },
-    {
-        id: "robert-chen",
-        name: "Robert Chen",
-        title: "PhD Student",
-        image: "/people/robert-chen.jpg",
+        id: "avinash-reddy",
+        name: "Avinash Reddy",
+        title: "Ph.D. Student, UCF",
+        image: "https://media.licdn.com/dms/image/v2/D5603AQGixIHCW1QQ3g/profile-displayphoto-shrink_400_400/B56ZTkOMB9HoAg-/0/1738995713129?e=1752710400&v=beta&t=oToLh1Au9jXXdckMWSPz2gCowmYWERpbArOyzPEiu0c", // No image URL provided
         role: "phd",
-        bio: "Robert is investigating robust reinforcement learning algorithms that can safely operate in uncertain environments.",
-        interests: ["Reinforcement Learning", "Robustness", "Safety-Critical Systems"],
-        github: "https://github.com/robertchen",
-        twitter: "https://twitter.com/robertchen",
-        email: "robert.chen@example.edu"
+        bio: "Ph.D. student interested in AI alignment and diffusion models.",
+        interests: [
+            "AI alignment",
+            "Reasoning",
+            "Diffusion models"
+        ],
+        website: "avinashreddy.dev", // No personal website provided
+        github: "https://github.com/avinashreddydev",
+        twitter: "https://x.com/avinashreddydev", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/avinashreddydev/",
+        scholar: "https://scholar.google.com/citations?user=IlXEKrcAAAAJ&hl=en",
+        email: "avinashreddy.idio@gmail.com"
     },
     {
-        id: "sarah-williams",
-        name: "Sarah Williams",
-        title: "PhD Student",
-        image: "/people/sarah-williams.jpg",
+        id: "souradip-chakraborty",
+        name: "Souradip Chakraborty",
+        title: "Ph.D. Student, UMD",
+        image: "https://media.licdn.com/dms/image/v2/C5103AQFsBBuJQpVWgw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1568575410679?e=1752710400&v=beta&t=yOic5lGWsbBia2jqWMtW3CuYdozSx8qrZPWVM1xHOzk", // No image URL provided
+        role: "collaborator",
+        bio: "Souradip Chakraborty is a Ph.D. student at the University of Maryland focused on developing principled reinforcement learning algorithms to align AI agents in adaptive environments. His work aims to ensure AI systems are safe, robust, and aligned with human behavior.",
+        interests: [
+            "Reinforcement Learning",
+            "Alignment",
+            "Language Models",
+            "Optimization"
+        ],
+        website: "https://souradip-umd.github.io/",
+        github: "https://github.com/souradip-chakraborty",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/souradip-chakraborty/",
+        scholar: "https://scholar.google.co.in/citations?hl=en&user=pvETm1wAAAAJ&view_op=list_works&sortby=pubdate",
+        email: "schakra3@umd.edu"
+    },
+    {
+        id: "soumyasuvra-ghosal",
+        name: "Soumya Suvra Ghosal",
+        title: "Ph.D. Student, UMD",
+        image: "https://media.licdn.com/dms/image/v2/D4D03AQHeELGDGy7dhw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722836299945?e=1752710400&v=beta&t=Bypl9r5pr7QWwzAuuNsIJZwHOAvWd2lM2GNFeyf-dN0", // No image URL provided
+        role: "collaborator",
+        bio: "I am a Ph.D. student in the CS department at the University of Maryland, College Park. Prior to this, I completed my Master's in Computer Science at the University of Wisconsin-Madison. I am interested in the broad domain of LLM Alignment, and Trustworthy AI.",
+        interests: ["LLM Alignment", "Trustworthy AI"],
+        website: "https://soumya1612-rasha.github.io/Soumya/",
+        github: "https://github.com/Soumya1612-Rasha",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/soumya-suvra-ghosal-583691140/",
+        scholar: "https://scholar.google.com/citations?user=zE8aFIwAAAAJ&hl=en",
+        email: "sghosal@umd.edu"
+    },
+    
+
+    {
+        id: "soumik-ghosh",
+        name: "Soumik Ghosh",
+        title: "Ph.D. Student, UCF",
+        image: "https://media.licdn.com/dms/image/v2/D4E03AQEno77SkTKEhw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696221990946?e=1752710400&v=beta&t=fcM4omBLVFcVxertNpD53cFUnk5Ny1DjYV9XktbDKuM", // No image URL provided
         role: "phd",
-        bio: "Sarah's research focuses on developing formal verification techniques for deep learning systems to provide guarantees about their behavior.",
-        interests: ["Formal Verification", "Neural Networks", "Safety Guarantees"],
-        github: "https://github.com/sarahwilliams",
-        linkedin: "https://linkedin.com/in/sarahwilliams",
-        email: "sarah.williams@example.edu"
+        bio: "Soumik Ghosh is a Computer Science Ph.D. candidate at UCF researching generative models, diffusion alignment, and responsible AI, with a focus on machine unlearning. He holds a BS-MS in Physics and a PG diploma in computational modeling, and enjoys cooking, gardening, photography, and bass guitar.",
+        interests: [
+            "Generative Models",
+            "Alignment of Diffusion Models",
+            "Safety in T2I models",
+            "Machine Unlearning"
+        ],
+        website: "", // No personal website provided
+        github: "https://github.com/soumikg08",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/soumikg08/",
+        scholar: "https://scholar.google.com/citations?user=TPFV3hsAAAAJ&hl=en",
+        email: "soumik.ghosh@ucf.edu"
     },
+
+    
+
     {
-        id: "michael-brown",
-        name: "Michael Brown",
-        title: "PhD Student",
-        image: "/people/michael-brown.jpg",
+        id: "prashant-trivedi",
+        name: "Prashant Trivedi",
+        title: "Post-doctoral Scholar, UCF",
+        image: "https://media.licdn.com/dms/image/v2/D4D03AQG1cVuJrtMdrQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1667656459333?e=1752710400&v=beta&t=n-qrmTAD2l32rdpScn-ObAfheMh71aO0DID3B_7k-uI", // No image URL provided
+        role: "postdoc",
+        bio: "Prashant Trivedi is a post-doctoral scholar at UCF working closely with Prof. Amrit Singh Bedi. He received his Ph.D. from IIT Bombay under the supervision of Prof. N. Hemachandra. His research focuses on advancing decision-making under uncertainty, with an emphasis on both theoretical and practical aspects of machine learning, optimization, reinforcement learning (RL), multi-agent systems, and AI alignment.",
+        interests: [
+            "Reinforcement Learning (RL)",
+            "Multi-Agent Reinforcement Learning (MARL)",
+            "Optimization",
+            "AI Alignment"
+        ],
+        website: "https://prashantrivedi.github.io/",
+        github: "https://github.com/PrashanTrivedi",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/prashant-trivedi-59784a143/",
+        scholar: "https://scholar.google.com/citations?user=05_8-qUAAAAJ&hl=en",
+        email: "prashant.trivedi@ucf.edu"
+    },
+
+    {
+        id: "anirudh-thatipelli",
+        name: "Anirudh Thatipelli",
+        title: "Ph.D. Student, UCF",
+        image: "https://media.licdn.com/dms/image/v2/D4E03AQFRzTRdnyyu0A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723563969594?e=1752710400&v=beta&t=wBAmDxldNu0t8AZappBp6Zr5f30kQphPEnXFDGuGyBs", // No image URL provided
         role: "phd",
-        bio: "Michael is working on methods to detect and mitigate distribution shifts in deployed AI systems.",
-        interests: ["Distribution Shift", "Continual Learning", "Adaptive AI"],
-        github: "https://github.com/michaelbrown",
-        scholar: "https://scholar.google.com/citations?user=michaelbrown",
-        email: "michael.brown@example.edu"
+        bio: "Ph.D. student interested in AI alignment and diffusion models.",
+        interests: [
+            "AI alignment",
+            "Reasoning",
+            "Diffusion models"
+        ],
+        website: "", // No personal website provided
+        github: "https://github.com/Anirudh257",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/anirudh-thatipelli/",
+        scholar: "https://scholar.google.com/citations?user=siY4W9gAAAAJ",
+        email: "an555391@ucf.edu"
     },
+
     {
-        id: "elena-martinez",
-        name: "Elena Martinez",
-        title: "Masters Student",
-        image: "/people/elena-martinez.jpg",
-        role: "masters",
-        bio: "Elena is researching approaches to make large language models more reliable and factually consistent.",
-        interests: ["Language Models", "Factuality", "Reliability"],
-        github: "https://github.com/elenamartinez",
-        email: "elena.martinez@example.edu"
-    },
-    {
-        id: "chris-taylor",
-        name: "Chris Taylor",
-        title: "Masters Student",
-        image: "/people/chris-taylor.jpg",
-        role: "masters",
-        bio: "Chris is developing tools for testing and evaluating the robustness of vision-based AI systems.",
-        interests: ["Computer Vision", "Robustness Testing", "Adversarial Examples"],
-        github: "https://github.com/christaylor",
-        linkedin: "https://linkedin.com/in/christaylor",
-        email: "chris.taylor@example.edu"
-    },
-    {
-        id: "lisa-johnson",
-        name: "Lisa Johnson",
-        title: "Undergraduate Researcher",
-        image: "/people/lisa-johnson.jpg",
-        role: "undergrad",
-        bio: "Lisa is assisting with projects on explainable AI and human-AI collaboration.",
-        interests: ["Explainable AI", "Human-Computer Interaction"],
-        github: "https://github.com/lisajohnson",
-        email: "lisa.johnson@example.edu"
+        id: "utsav-singh",
+        name: "Utsav Singh",
+        title: "Researcher, IIT Kanpur",
+        image: "https://media.licdn.com/dms/image/v2/D4E03AQE9II0AW0puqw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709489137998?e=1752710400&v=beta&t=1LhyLGpbDgIEnK2C7IUIf7ca4MqM3E0c9J-_UGYZsKM", // No image URL provided
+        role: "postdoc",
+        bio: "ML enthusiast trying to decipher and bridge the gap between theoretical machine learning and real-world applications.",
+        interests: [
+            "Reinforcement Learning",
+            "AI Alignment",
+            "Robotics",
+            "LLMs"
+        ],
+        website: "", // No personal website provided
+        github: "https://github.com/Utsavz/",
+        twitter: "", // No Twitter provided
+        linkedin: "https://www.linkedin.com/in/utsavz",
+        scholar: "https://scholar.google.com/citations?user=VzkTu6kAAAAJ&hl=en&oi=ao",
+        email: "utsavz@iitk.ac.in"
     }
+    
+    
+
+   
 ];
 
 // Blog posts data
@@ -825,7 +887,7 @@ export const projects: Project[] = [
 export interface News {
     id: string;
     title: string;
-    date: string;
+    date: Date;
     excerpt: string;
     link?: string;
 }
@@ -834,28 +896,27 @@ export const news: News[] = [
     {
         id: "new-paper-icml-2025",
         title: "New paper accepted at ICML 2025",
-        date: "May 7, 2025",
+        date: new Date("2025-05-07T12:00:00Z"),
         excerpt: "We're excited to announce that our paper `Inference-Time Alignment of LLMs via User-Specified Multi-Criteria Transfer Decoding` has been accepted at ICML 2025. This work represents a inference-time alignment of LLMs that can be used to align LLMs with user-specified criteria.",
         link: "/blog/inference-time-alignment-multi-criteria"
     },
     {
         id: "new-paper-aaai-2024",
         title: "New paper accepted at AAAI 2024",
-        date: "December 12, 2024",
+        date: new Date("2024-12-12T12:00:00Z"),
         excerpt: "Our paper titled `Align-Pro: A principled approach to alignment of LLMs` has been accepted at AAAI 2024. This work represents a principled approach to alignment of LLMs that can be used to align LLMs by employing a trainable prompter",
         link: "/blog/align-pro"
     },
     {
         id: "new-phd-student-2024",
         title: "Welcoming a PhD student to the lab",
-        date: "August 1, 2024",
+        date: new Date("2024-08-19T12:00:00Z"),
         excerpt: "We're delighted to welcome a new PhD student, Avinash Reddy, joining our lab this fall semester. He will be working on the broad topic of `Alignment of Language Models`.",
     },
     {
         id: "launch-of-saferr-ai-lab",
         title: "Launch of SAFERR AI Lab",
-        date: "August 19, 2024",
+        date: new Date("2024-08-19T12:00:00Z"),
         excerpt: "We're excited to announce the launch of SAFERR AI Lab. This lab is dedicated to the research of safety, reliability, and robustness of AI systems.",
     }
-
-];
+].sort((a, b) => b.date.getTime() - a.date.getTime()); // Sort by date, newest first

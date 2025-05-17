@@ -1,7 +1,7 @@
 ---
 title: "Launch of SAFERR AI Lab: Shaping the Future of Safe and Reliable AI"
 author: "Dr. Amrit Singh Bedi"
-date: 2025-05-16
+date: 2024-08-19
 image: "/blog/launch-saferr-ai-lab.png"
 tags: ["launch", "lab", "safety", "reliability", "robustness", "AI ethics", "UCF"]
 description: "Introducing the SAFERR AI Lab at the University of Central Florida — a research initiative dedicated to the safety, reliability, and robustness of AI systems."

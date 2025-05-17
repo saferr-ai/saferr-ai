@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { projects } from '../lib/data';
 ---
 
+
+
 <Layout title="Research - SAFERR AI Lab">
   <div class="container mx-auto px-4 py-12">
     <div class="text-center mb-12">
@@ -12,7 +14,7 @@ import { projects } from '../lib/data';
       </p>
     </div>
     
-    <div class="space-y-16">
+    <!-- <div class="space-y-16">
       {projects.map((project, index) => (
         <div class={`project-item grid grid-cols-1 lg:grid-cols-2 gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
           <div class="project-image flex items-center justify-center">
@@ -60,7 +62,7 @@ import { projects } from '../lib/data';
     </div>
     
     <!-- Research methodology section -->
-    <div class="mt-24">
+    <!-- <div class="mt-24">
       <h2 class="text-3xl font-bold text-center mb-12">Our Research Methodology</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,6 +126,15 @@ import { projects } from '../lib/data';
           <p>We conduct thorough ethical analyses of AI systems and applications to identify and address potential societal impacts and harms.</p>
         </div>
       </div>
-    </div>
+    </div> --> 
+  
+  <!-- Add a Yet to come section -->
+  <div class="mt-24">
+    <h2 class="text-3xl font-bold text-center mb-12">Yet to be added</h2>
+    <p class="text-lg max-w-3xl mx-auto">
+      We are working on some exciting projects that will be added soon. Stay tuned!
+    </p>
+  </div>
+  
   </div>
 </Layout> 
