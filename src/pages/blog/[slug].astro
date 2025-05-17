@@ -29,7 +29,7 @@ const formatDate = (date: Date): string => {
 // Social Media metadata
 const ogTitle = entry.data.title;
 const ogDescription = entry.data.description || entry.data.title; 
-const ogImage = entry.data.image || '/ogimage.png';
+const ogImage = entry.data.image ? `https://saferrai-lab.org${entry.data.image}` : 'https://saferrai-lab.org/ogimage.png';
 const ogUrl = `https://saferrai-lab.org/blog/${entry.slug}`;
 const ogLogo = "/logo.png";
 ---
