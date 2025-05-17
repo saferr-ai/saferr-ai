@@ -39,13 +39,15 @@ const ogLogo = "/logo.png";
   description={ogDescription}
 >
   {/* Primary Meta Tags */}
-  <meta name="title" content={ogTitle} />
+  <meta name="title" content={`${entry.data.title} - SAFERR AI Lab`} />
   <meta name="description" content={ogDescription} />
+  <link rel="canonical" href={ogUrl} />
+  <meta name="robots" content="index, follow" />
 
   {/* Open Graph / Facebook */}
   <meta property="og:type" content="article" />
   <meta property="og:url" content={ogUrl} />
-  <meta property="og:title" content={ogTitle} />
+  <meta property="og:title" content={`${entry.data.title} - SAFERR AI Lab`} />
   <meta property="og:description" content={ogDescription} />
   <meta property="og:image" content={ogImage} />
   <meta property="og:logo" content={ogLogo} />
@@ -60,7 +62,7 @@ const ogLogo = "/logo.png";
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:title" content={`${entry.data.title} - SAFERR AI Lab`} />
   <meta name="twitter:description" content={ogDescription} />
   <meta name="twitter:image" content={ogImage} />
 
@@ -84,6 +86,32 @@ const ogLogo = "/logo.png";
   <meta name="application-name" content="SAFERR AI Lab" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="mobile-web-app-capable" content="yes" />
+
+  {/* Structured Data: Article */}
+  <script type="application/ld+json">{JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: entry.data.title,
+    description: ogDescription,
+    image: ogImage,
+    datePublished: entry.data.date.toISOString(),
+    author: {
+      '@type': 'Person',
+      name: entry.data.author
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'SAFERR AI Lab',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://saferrai-lab.org/logo.png'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': ogUrl
+    }
+  })}</script>
 
   <div class="container mx-auto px-4 py-12">
     <article class="prose prose-lg max-w-3xl mx-auto dark:prose-invert">
