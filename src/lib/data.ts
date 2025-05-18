@@ -683,7 +683,7 @@ export const people: Person[] = [
         title: "Ph.D. Student, UCF",
         image: "https://media.licdn.com/dms/image/v2/D4E03AQEno77SkTKEhw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696221990946?e=1752710400&v=beta&t=fcM4omBLVFcVxertNpD53cFUnk5Ny1DjYV9XktbDKuM", // No image URL provided
         role: "phd",
-        bio: "Soumik Ghosh is a Computer Science Ph.D. candidate at UCF researching generative models, diffusion alignment, and responsible AI, with a focus on machine unlearning. He holds a BS-MS in Physics and a PG diploma in computational modeling, and enjoys cooking, gardening, photography, and bass guitar.",
+        bio: "Soumik Ghosh is a Computer Science Ph.D. candidate at UCF researching generative models, diffusion alignment, and responsible AI, with a focus on machine unlearning. He holds a BS-MS in Physics and a PG diploma in condensed matter physics, and enjoys cooking, gardening, photography, and bass guitar.",
         interests: [
             "Generative Models",
             "Alignment of Diffusion Models",
