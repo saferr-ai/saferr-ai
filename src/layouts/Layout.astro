@@ -6,20 +6,23 @@ interface Props {
 	title: string;
 	description?: string;
 	image?: string;
+	url?: string;
 }
 
 const { 
 	title, 
 	description = "SAFERR AI Lab - Safety, Reliability, and Robustness of AI",
-	image = 'https://saferrai-lab.org/ogimage.png'
+	image = 'https://saferrai-lab.org/ogimage.png', 
+	url = 'https://saferrai-lab.org',
+	
 } = Astro.props;
 
 // Social Media metadata
 const ogTitle = title;
 const ogDescription = description;
 const ogImage = image;
-const ogUrl = "https://saferrai-lab.org";
-const ogLogo = "https://saferrai-lab.org/logo.png";
+const ogUrl = url;
+const ogLogo = 'https://saferrai-lab.org/logo.png'
 ---
 
 <!doctype html>
