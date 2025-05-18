@@ -14,7 +14,6 @@ const {
 	description = "SAFERR AI Lab - Safety, Reliability, and Robustness of AI",
 	image = 'https://saferrai-lab.org/ogimage.png', 
 	url = 'https://saferrai-lab.org',
-	
 } = Astro.props;
 
 // Social Media metadata
@@ -22,21 +21,20 @@ const ogTitle = title;
 const ogDescription = description;
 const ogImage = image;
 const ogUrl = url;
-const ogLogo = 'https://saferrai-lab.org/logo.png'
+const ogLogo = 'https://saferrai-lab.org/logo.png';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-80KBWPKJ1N"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-80KBWPKJ1N');
-	</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-80KBWPKJ1N"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-80KBWPKJ1N');
+		</script>
 		
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -59,6 +57,8 @@ const ogLogo = 'https://saferrai-lab.org/logo.png'
 		<meta property="og:title" content={ogTitle} />
 		<meta property="og:description" content={ogDescription} />
 		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta property="og:image:type" content="image/png" />
 		<meta property="og:site_name" content="SAFERR AI Lab" />
 		<meta property="og:locale" content="en_US" />
@@ -69,6 +69,12 @@ const ogLogo = 'https://saferrai-lab.org/logo.png'
 		<meta name="twitter:title" content={ogTitle} />
 		<meta name="twitter:description" content={ogDescription} />
 		<meta name="twitter:image" content={ogImage} />
+		<meta name="twitter:image:width" content="1200" />
+		<meta name="twitter:image:height" content="630" />
+
+		{/* WhatsApp specific */}
+		<meta property="og:image:secure_url" content={ogImage} />
+		<meta property="og:image:alt" content={ogTitle} />
 
 		{/* Additional Meta Tags */}
 		<meta name="theme-color" content="#3b82f6" />
@@ -98,7 +104,6 @@ const ogLogo = 'https://saferrai-lab.org/logo.png'
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 			})(window,document,'script','dataLayer','GTM-5GPST242');</script>
 		<!-- End Google Tag Manager -->
-		
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<!-- Google Tag Manager (noscript) -->
