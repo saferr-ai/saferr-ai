@@ -13,7 +13,7 @@ export interface Publication {
 }
 
 export const publications: Publication[] = [
-    const publications: Publication[] = [
+    
   {
     id: "nips-24-fact-free-riding",
     title: "FACT or Fiction: Can Truthful Mechanisms Eliminate Federated Free Riding?",
@@ -218,8 +218,6 @@ export const publications: Publication[] = [
     pdf: "",
     keywords: ["coreset", "Stein discrepancy", "model-based RL", "reinforcement learning"]
   },
-];
-
 ];
 
 // People data
