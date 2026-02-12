@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
 	title: string;
@@ -104,6 +105,9 @@ const ogLogo = 'https://saferrai-lab.org/logo.png';
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 			})(window,document,'script','dataLayer','GTM-5GPST242');</script>
 		<!-- End Google Tag Manager -->
+
+		<!-- Vercel Web Analytics -->
+		<Analytics />
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<!-- Google Tag Manager (noscript) -->
