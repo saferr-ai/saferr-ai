@@ -356,26 +356,7 @@ export const people: Person[] = [
         email: "prashant.trivedi@ucf.edu"
     },
 
-    {
-        id: "anirudh-thatipelli",
-        name: "Anirudh Thatipelli",
-        title: "Ph.D. Student, UCF",
-        image: "https://media.licdn.com/dms/image/v2/D4E03AQFRzTRdnyyu0A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723563969594?e=1752710400&v=beta&t=wBAmDxldNu0t8AZappBp6Zr5f30kQphPEnXFDGuGyBs", // No image URL provided
-        role: "phd",
-        bio: "Ph.D. student interested in AI alignment and diffusion models.",
-        interests: [
-            "AI alignment",
-            "Reasoning",
-            "Diffusion models"
-        ],
-        website: "", // No personal website provided
-        github: "https://github.com/Anirudh257",
-        twitter: "", // No Twitter provided
-        linkedin: "https://www.linkedin.com/in/anirudh-thatipelli/",
-        scholar: "https://scholar.google.com/citations?user=siY4W9gAAAAJ",
-        email: "an555391@ucf.edu"
-    },
-
+   
     {
         id: "utsav-singh",
         name: "Utsav Singh",
