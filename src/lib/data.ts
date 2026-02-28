@@ -268,7 +268,7 @@ export const people: Person[] = [
             "Reasoning",
             "Diffusion models"
         ],
-        website: "avinashreddy.dev", // No personal website provided
+        website: "http://avinashreddy.dev", // No personal website provided
         github: "https://github.com/avinashreddydev",
         twitter: "https://x.com/avinashreddydev", // No Twitter provided
         linkedin: "https://www.linkedin.com/in/avinashreddydev/",
